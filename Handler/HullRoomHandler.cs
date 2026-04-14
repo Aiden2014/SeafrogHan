@@ -17,6 +17,10 @@ public class HullRoomHandler : TranslationHandlerBase
                 {
                     return hullMatch.Groups[1].Value + " 号舱 ";
                 }
+                if (hullMatch.Groups[2].Value.Equals("Engine"))
+                {
+                    return $"{hullMatch.Groups[1].Value} 号舱引擎室";
+                }
                 return $"{hullMatch.Groups[1].Value} 号舱 {hullMatch.Groups[2].Value} 室";
             }
         }
